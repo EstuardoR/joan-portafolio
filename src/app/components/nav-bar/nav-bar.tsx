@@ -17,7 +17,9 @@ export const NavBar = () => {
       </NavBarNameStyled>
       <NavBarSectionsStyled>
         {SECTIONS.map((s) => (
-          <NavBarLinkStyled key={s.id}>{s.sectionName}</NavBarLinkStyled>
+          <NavBarLinkStyled key={s.slug} component="a" href={`#${s.slug}`}>
+            {s.sectionName}
+          </NavBarLinkStyled>
         ))}
       </NavBarSectionsStyled>
     </NavBarWrapperStyled>

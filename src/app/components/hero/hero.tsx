@@ -3,27 +3,52 @@
 import { Button } from "@mui/material";
 import {
   HeroActionsStyled,
+  HeroCvGroupStyled,
+  HeroCvNoteStyled,
   HeroDescriptionStyled,
+  HeroMainInfoStyled,
   HeroNameStyled,
+  HeroPixelArtStyled,
   HeroRoleStyled,
   HeroWrapperStyled,
+  PixelArtWrapperStyled,
 } from "./styles";
+import Image from "next/image";
 
-// TODO(joan): reemplaza el contenido de ejemplo con tu propia voz.
-// La estructura (rol -> nombre -> descripción -> acciones) es solo
-// un punto de partida: cambia el layout, el orden o el markup como prefieras.
 export const Hero = () => {
   return (
     <HeroWrapperStyled id="hero">
-      <HeroRoleStyled>Frontend Engineer</HeroRoleStyled>
-      <HeroNameStyled variant="h1">Joan Rodas</HeroNameStyled>
-      <HeroDescriptionStyled>
-        Diseño y desarrollo software que no se interpone en tu camino.
-      </HeroDescriptionStyled>
-      <HeroActionsStyled>
-        <Button variant="contained">Ver proyectos</Button>
-        <Button variant="outlined">Descargar CV</Button>
-      </HeroActionsStyled>
+      <HeroMainInfoStyled>
+        <HeroRoleStyled>Frontend Engineer</HeroRoleStyled>
+        <HeroNameStyled variant="h1">Joan Rodas</HeroNameStyled>
+        <HeroDescriptionStyled>
+          Diseño y desarrollo software que no se interpone en tu camino.
+        </HeroDescriptionStyled>
+        <HeroActionsStyled>
+          <Button variant="contained" component="a" href="#proyectos">
+            Ver proyectos
+          </Button>
+          <HeroCvGroupStyled>
+            <Button variant="outlined" disabled>
+              Descargar CV
+            </Button>
+            <HeroCvNoteStyled>Próximamente</HeroCvNoteStyled>
+          </HeroCvGroupStyled>
+        </HeroActionsStyled>
+      </HeroMainInfoStyled>
+
+      <HeroPixelArtStyled>
+        <PixelArtWrapperStyled>
+          <Image
+            src="/images/rostro_animado.gif"
+            alt="Pixel art de Joan Rodas"
+            width={300}
+            height={300}
+            unoptimized
+            style={{ objectFit: "cover" }}
+          />
+        </PixelArtWrapperStyled>
+      </HeroPixelArtStyled>
     </HeroWrapperStyled>
   );
 };

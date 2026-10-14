@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import {
   AboutMeDescriptionStyled,
+  AboutMeLeadStyled,
+  AboutMePhotoFrameStyled,
   AboutMeSectionLabelStyled,
   AboutMeSectionWrapperStyled,
   AboutMeTextWrapperStyled,
@@ -14,18 +17,28 @@ export const AboutMe = () => {
       <AboutMeSectionLabelStyled>Sobre mí</AboutMeSectionLabelStyled>
       <AboutMeWrapperStyled>
         <AboutMeTextWrapperStyled>
+          <AboutMeLeadStyled>
+            Construyo experiencias digitales con atención al detalle.
+          </AboutMeLeadStyled>
           <AboutMeDescriptionStyled>
-            Llevo 2 años construyendo aplicaciones web y moviles. Me encargo de todo el proceso 
-            desde la idea inicial hasta el ultimo color de la paleta. Para que obtengas un resultado autentico y creativo desde 
-            el mas pequeño detalle, sin retrasos ni esperas de semanas interminables.
-          </AboutMeDescriptionStyled>
-          <AboutMeDescriptionStyled variant="h5">
-          
+            Llevo 2 años creando aplicaciones web y móviles, acompañando cada
+            proyecto desde la idea inicial hasta el último detalle de la
+            interfaz. Me gusta cuidar tanto la experiencia como el código que
+            hay detrás, para entregar resultados auténticos sin vueltas
+            innecesarias.
           </AboutMeDescriptionStyled>
         </AboutMeTextWrapperStyled>
-        {/* <AboutMePhotoFrameStyled>
-          <Image src="/images/me.jpeg" alt="me" width={200} height={200} />
-        </AboutMePhotoFrameStyled> */}
+        
+        <AboutMePhotoFrameStyled>
+          <Image
+            src="/images/fullbody.jpeg"
+            alt="Joan Rodas"
+            fill
+            sizes="240px"
+            quality={90}
+            style={{ objectFit: "cover" }}
+          />
+        </AboutMePhotoFrameStyled>
       </AboutMeWrapperStyled>
     </AboutMeSectionWrapperStyled>
   );
