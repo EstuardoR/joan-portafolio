@@ -1,13 +1,26 @@
 import { Box, Typography, styled } from "@mui/material";
 
-export const HeroWrapperStyled = styled(Box)(() => ({
+export const HeroWrapperStyled = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  alignItems: "center",
+  flexWrap: "wrap",
+  gap: "40px",
+  padding: "0 24px",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column-reverse",
+  },
+}));
+
+export const HeroMainInfoStyled = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   minHeight: "100vh",
-  padding: "0 24px",
   scrollMarginTop: "100px",
 }));
+
 
 export const HeroRoleStyled = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-pixel)",
@@ -48,4 +61,24 @@ export const HeroCvNoteStyled = styled(Typography)(({ theme }) => ({
   textTransform: "uppercase",
   letterSpacing: "0.05em",
   color: theme.palette.text.secondary,
+}));
+
+export const HeroPixelArtStyled = styled(Box)(() => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+}));
+
+export const PixelArtWrapperStyled = styled(Box)(({ theme }) => ({
+  position: 'relative',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: 'clamp(220px, 32vw, 380px)',
+  aspectRatio: '1 / 1',
+  borderRadius: '50%',
+  overflow: 'hidden',
+  backgroundColor: theme.palette.background.paper,
+  border: `4px solid ${theme.palette.common.black}`,
+  boxShadow: `6px 6px 0 0 ${theme.palette.primary.main}`,
 }));

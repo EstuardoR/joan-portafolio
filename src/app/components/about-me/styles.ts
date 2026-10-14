@@ -5,6 +5,7 @@ export const AboutMeSectionWrapperStyled = styled(Box)(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     scrollMarginTop: '100px',
+    width: '100%',
 }));
 
 export const AboutMeSectionLabelStyled = styled(Typography)(({theme}) => ({
@@ -21,18 +22,23 @@ export const AboutMeWrapperStyled = styled(Box)(({theme}) => ({
     justifyContent: 'center',
     flexDirection: 'row',
     alignItems:'center',
-    gap: '32px',
-    width: 'fit-content',
-    maxWidth: '640px',
-    padding: '32px 40px',
+    gap: '40px',
+    width: '80%',
+    padding: '40px',
     backgroundColor: theme.palette.background.paper,
     border: `4px solid ${theme.palette.text.primary}`,
     boxShadow: `6px 6px 0 0 ${theme.palette.primary.main}`,
+    [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column',
+        padding: '28px 20px',
+    },
 }));
 
 export const AboutMePhotoFrameStyled = styled(Box)(({theme}) => ({
+    position: 'relative',
     flexShrink: 0,
-    lineHeight: 0,
+    width: '240px',
+    aspectRatio: '694 / 1021',
     borderRadius: '8px',
     overflow: 'hidden',
     border: `3px solid ${theme.palette.common.black}`,

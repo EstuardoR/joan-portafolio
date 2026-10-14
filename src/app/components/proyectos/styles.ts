@@ -39,6 +39,19 @@ export const ProyectoCardStyled = styled(Box)(({ theme }) => ({
   boxShadow: `6px 6px 0 0 ${theme.palette.primary.main}`,
 }));
 
+export const ProyectoCardBodyStyled = styled(Box)(() => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "16px",
+  flexGrow: 1,
+}));
+
+export const ProyectoCardFooterStyled = styled(Box)(() => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "16px",
+}));
+
 export const ProyectoPlaceholderBadgeStyled = styled(Typography)(
   ({ theme }) => ({
     fontFamily: "var(--font-pixel)",
@@ -52,17 +65,13 @@ export const ProyectoPlaceholderBadgeStyled = styled(Typography)(
   })
 );
 
-export const ProyectoImagePlaceholderStyled = styled(Box)(({ theme }) => ({
+export const ProyectoImageFrameStyled = styled(Box)(({ theme }) => ({
+  position: "relative",
+  width: "100%",
   aspectRatio: "16 / 9",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  border: `2px dashed ${theme.palette.text.secondary}`,
+  overflow: "hidden",
+  border: `2px solid ${theme.palette.text.primary}`,
   backgroundColor: theme.palette.background.default,
-  color: theme.palette.text.secondary,
-  fontFamily: "var(--font-pixel)",
-  fontSize: "0.7rem",
-  textTransform: "uppercase",
 }));
 
 export const ProyectoTitleStyled = styled(Typography)(() => ({
@@ -90,3 +99,20 @@ export const ProyectoTagStyled = styled(Typography)(({ theme }) => ({
   border: `1px solid ${theme.palette.text.secondary}`,
   padding: "2px 6px",
 }));
+
+export const ProyectoLinkGroupStyled = styled(Box)(() => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  gap: "6px",
+}));
+
+export const ProyectoComingSoonNoteStyled = styled(Typography)(
+  ({ theme }) => ({
+    fontFamily: "var(--font-pixel)",
+    fontSize: "0.65rem",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    color: theme.palette.text.secondary,
+  })
+);
