@@ -1,28 +1,23 @@
-interface ISection {
-  id: number;
+export interface ISection {
+  slug: string;
   sectionName: string;
-  route: string;
 }
 
 export const SECTIONS: ISection[] = [
   {
-    id: 1,
-    sectionName: "Sobre mi",
-    route: "/#",
+    slug: "sobre-mi",
+    sectionName: "Sobre mí",
   },
   {
-    id: 2,
+    slug: "tecnologias",
     sectionName: "Tecnologías",
-    route: "/#",
   },
   {
-    id: 3,
+    slug: "proyectos",
     sectionName: "Proyectos",
-    route: "/#",
   },
   {
-    id: 4,
-    sectionName: "Contactame",
-    route: "/#",
+    slug: "contacto",
+    sectionName: "Contáctame",
   },
 ];
