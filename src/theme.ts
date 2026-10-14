@@ -36,6 +36,13 @@ export const theme = createTheme({
     h5: { fontFamily: "var(--font-display)", fontWeight: 700},
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          scrollBehavior: "smooth",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -62,6 +69,13 @@ export const theme = createTheme({
             borderWidth: 2,
             boxShadow: `2px 2px 0 0 ${theme.palette.primary.main}`,
             transform: "translate(2px, 2px)",
+          },
+          "&.Mui-disabled": {
+            borderWidth: 2,
+            borderColor: theme.palette.text.secondary,
+            color: theme.palette.text.secondary,
+            boxShadow: "none",
+            opacity: 0.6,
           },
         }),
       },
