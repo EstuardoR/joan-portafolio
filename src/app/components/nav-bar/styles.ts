@@ -1,13 +1,17 @@
-import { Box, Typography, styled } from "@mui/material";
+import { Box, Typography, alpha, styled } from "@mui/material";
 import type { ElementType } from "react";
 
-export const NavBarWrapperStyled = styled(Box)(() => ({
+export const NavBarWrapperStyled = styled(Box)(({ theme }) => ({
   display: "flex",
   position: "fixed",
   flexDirection: "row",
   width: "100vw",
   height: "fit-content",
-  backgroundColor: "transparent",
+  zIndex: theme.zIndex.appBar,
+  backgroundColor: alpha(theme.palette.background.default, 0.7),
+  backdropFilter: "blur(12px)",
+  WebkitBackdropFilter: "blur(12px)",
+  borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.25)}`,
   padding: "10px",
 }));
 
