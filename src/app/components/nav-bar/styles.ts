@@ -1,4 +1,5 @@
 import { Box, Typography, styled } from "@mui/material";
+import type { ElementType } from "react";
 
 export const NavBarWrapperStyled = styled(Box)(() => ({
   display: "flex",
@@ -31,12 +32,16 @@ export const NavBarSectionsStyled = styled(Box)(() => ({
   flex: 1,
 }));
 
-export const NavBarLinkStyled = styled(Typography)(({ theme }) => ({
+export const NavBarLinkStyled = styled(Typography)<{
+  component?: ElementType;
+  href?: string;
+}>(({ theme }) => ({
   fontFamily: "var(--font-pixel)",
   fontSize: "0.8rem",
   textTransform: "uppercase",
   letterSpacing: "0.05em",
   color: theme.palette.text.secondary,
+  textDecoration: "none",
   cursor: "pointer",
   transition: "color 150ms ease",
   "&:hover": {

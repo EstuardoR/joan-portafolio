@@ -4,6 +4,7 @@ export const AboutMeSectionWrapperStyled = styled(Box)(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    scrollMarginTop: '100px',
 }));
 
 export const AboutMeSectionLabelStyled = styled(Typography)(({theme}) => ({
@@ -17,16 +18,16 @@ export const AboutMeSectionLabelStyled = styled(Typography)(({theme}) => ({
 
 export const AboutMeWrapperStyled = styled(Box)(({theme}) => ({
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     flexDirection: 'row',
     alignItems:'center',
     gap: '32px',
-    width: '80%',
-    minHeight: '400px',
-    padding: '40px',
-    border: `4px solid ${theme.palette.text.primary} `,
-    borderRadius: '15px',
-    boxShadow: `6px 6px 0 0 ${theme.palette.primary.main}`
+    width: 'fit-content',
+    maxWidth: '640px',
+    padding: '32px 40px',
+    backgroundColor: theme.palette.background.paper,
+    border: `4px solid ${theme.palette.text.primary}`,
+    boxShadow: `6px 6px 0 0 ${theme.palette.primary.main}`,
 }));
 
 export const AboutMePhotoFrameStyled = styled(Box)(({theme}) => ({
@@ -46,10 +47,17 @@ export const AboutMeTextWrapperStyled = styled(Box)(() => ({
     maxWidth: '480px',
 }));
 
+export const AboutMeLeadStyled = styled(Typography)(({theme}) => ({
+    fontFamily: 'var(--font-display)',
+    fontWeight: 700,
+    fontSize: '1.4rem',
+    color: theme.palette.text.primary,
+}));
+
 export const AboutMeDescriptionStyled = styled(Typography)(({theme}) => ({
-    color: theme.palette.primary.main,
+    color: theme.palette.text.secondary,
     fontFamily: 'var(--font-body)',
-    fontSize: '1.5rem',
-    fontWeight: 500,
-    whiteSpace: 'break-spaces'
+    fontSize: '1.05rem',
+    lineHeight: 1.6,
+    fontWeight: 400,
 }));
