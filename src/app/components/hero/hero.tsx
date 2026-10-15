@@ -3,8 +3,6 @@
 import { Button } from "@mui/material";
 import {
   HeroActionsStyled,
-  HeroCvGroupStyled,
-  HeroCvNoteStyled,
   HeroDescriptionStyled,
   HeroMainInfoStyled,
   HeroNameStyled,
@@ -28,12 +26,14 @@ export const Hero = () => {
           <Button variant="contained" component="a" href="#proyectos">
             Ver proyectos
           </Button>
-          <HeroCvGroupStyled>
-            <Button variant="outlined" disabled>
-              Descargar CV
-            </Button>
-            <HeroCvNoteStyled>Próximamente</HeroCvNoteStyled>
-          </HeroCvGroupStyled>
+          <Button
+            variant="outlined"
+            component="a"
+            href="/documents/cv-joan-rodas.pdf"
+            download="Joan-Rodas-CV.pdf"
+          >
+            Descargar CV
+          </Button>
         </HeroActionsStyled>
       </HeroMainInfoStyled>
 
@@ -42,8 +42,7 @@ export const Hero = () => {
           <Image
             src="/images/rostro_animado.gif"
             alt="Pixel art de Joan Rodas"
-            width={300}
-            height={300}
+            fill
             unoptimized
             style={{ objectFit: "cover" }}
           />

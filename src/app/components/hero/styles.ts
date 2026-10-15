@@ -9,16 +9,23 @@ export const HeroWrapperStyled = styled(Box)(({ theme }) => ({
   gap: "40px",
   padding: "0 24px",
   [theme.breakpoints.down("md")]: {
-    flexDirection: "column-reverse",
+    flexDirection: "column",
   },
 }));
 
-export const HeroMainInfoStyled = styled(Box)(() => ({
+export const HeroMainInfoStyled = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   minHeight: "100vh",
   scrollMarginTop: "100px",
+  [theme.breakpoints.down("md")]: {
+    minHeight: "auto",
+    alignItems: "center",
+    textAlign: "center",
+    paddingTop: "120px",
+    paddingBottom: "40px",
+  },
 }));
 
 
@@ -41,11 +48,15 @@ export const HeroDescriptionStyled = styled(Typography)(({ theme }) => ({
   fontFamily: "var(--font-pixel)"
 }));
 
-export const HeroActionsStyled = styled(Box)(() => ({
+export const HeroActionsStyled = styled(Box)(({ theme }) => ({
   display: "flex",
+  flexWrap: "wrap",
   alignItems: "flex-start",
   gap: "16px",
   marginTop: "32px",
+  [theme.breakpoints.down("md")]: {
+    justifyContent: "center",
+  },
 }));
 
 export const HeroCvGroupStyled = styled(Box)(() => ({
@@ -63,10 +74,13 @@ export const HeroCvNoteStyled = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export const HeroPixelArtStyled = styled(Box)(() => ({
+export const HeroPixelArtStyled = styled(Box)(({theme}) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  [theme.breakpoints.up("xs")]: {
+    marginBottom: "50px",
+  }
 }));
 
 export const PixelArtWrapperStyled = styled(Box)(({ theme }) => ({
