@@ -11,8 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# Editor directories and files
 AGENTS.md
 CLAUDE.md
+
 # Next.js
 .next
 out
