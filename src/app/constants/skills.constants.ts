@@ -34,6 +34,14 @@ export const SKILL_CATEGORIES: ISkillCategory[] = [
   {
     id: "herramientas",
     category: "Herramientas",
-    items: ["Git", "Github", "Bitbucket", "Jira", "Sentry", "Growthbook"],
+    items: [
+      "Git",
+      "Github",
+      "Bitbucket",
+      "Jira",
+      "Sentry",
+      "Growthbook",
+      "Postman",
+    ],
   },
 ];
