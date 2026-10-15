@@ -1,9 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 
-// Paleta: base oscura tipo Letterboxd + acento verde de marca,
-// con un segundo acento dorado (Balatro) para detalles puntuales.
-// Tipografía: Silkscreen (pixel) para UI corta, Bricolage Grotesque
-// (display) para títulos grandes, IBM Plex Sans (body) para lectura.
+
 export const theme = createTheme({
   palette: {
     mode: "dark",
