@@ -7,7 +7,6 @@ export const HeroWrapperStyled = styled(Box)(({ theme }) => ({
   alignItems: "center",
   flexWrap: "wrap",
   gap: "40px",
-  padding: "0 24px",
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
   },
